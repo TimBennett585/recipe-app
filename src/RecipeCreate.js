@@ -2,22 +2,20 @@ import React, { useState } from "react";
 
 function RecipeCreate({ createRecipe }) {
   // TODO: When the form is submitted, a new recipe should be created, and the form contents cleared.
-  const [content, setContent] = useState("");
   const initialFormState = {
-    name: "Name",
-    cuisine: "Cuisine",
-    photo: "URL",
-    ingredients: "Ingredients",
-    preparation: "Prepartion",
-    content: "",
+    name: "",
+    cuisine: "",
+    photo: "",
+    ingredients: "",
+    preparation: "",
   };
 
   // TODO: Add the required submit and change handlers
   const [formData, setFormData] = useState({ ...initialFormState });
   const handleChange = ({ target }) => {
     setFormData({
-      [target.name]: target.value,
       ...formData,
+      [target.name]: target.value,
     });
   };
 
@@ -43,6 +41,7 @@ function RecipeCreate({ createRecipe }) {
                 required={true}
                 onChange={handleChange}
                 value={formData.name}
+                placeholder="Name"
               />
             </td>
             <td>
@@ -54,6 +53,7 @@ function RecipeCreate({ createRecipe }) {
                 required={true}
                 onChange={handleChange}
                 value={formData.cuisine}
+                placeholder="Cuisine"
               />
             </td>
             <td>
@@ -65,6 +65,7 @@ function RecipeCreate({ createRecipe }) {
                 required={true}
                 onChange={handleChange}
                 value={formData.photo}
+                placeholder="URL"
               />
             </td>
             <td>
@@ -76,6 +77,7 @@ function RecipeCreate({ createRecipe }) {
                 rows={2}
                 onChange={handleChange}
                 value={formData.ingredients}
+                placeholder="Ingredients"
               />
             </td>
             <td>
@@ -87,6 +89,7 @@ function RecipeCreate({ createRecipe }) {
                 rows={2}
                 onChange={handleChange}
                 value={formData.preparation}
+                placeholder="Preparation"
               />
             </td>
             <td>

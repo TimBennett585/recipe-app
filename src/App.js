@@ -9,7 +9,7 @@ function App() {
 
   // TODO: Add the ability for the <RecipeList /> component to list and delete an existing recipe.
   const createRecipe = (newRecipe) =>
-    setRecipes((currentRecipes) => [newRecipe, ...currentRecipes]);
+    setRecipes((currentRecipes) => [...currentRecipes, newRecipe]);
   // TODO: Add the ability for the <RecipeCreate /> component to create new recipes.
   const deleteRecipe = (recipeToDelete) =>
     setRecipes((currentRecipes) =>
