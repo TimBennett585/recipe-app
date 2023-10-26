@@ -5,14 +5,14 @@ function RecipeList({ recipes, deleteRecipe }) {
   const listRecipes = recipes.map(
     ({ name, cuisine, photo, ingredients, preparation }, index) => (
       <tr key={index}>
-        <td>{name}</td>
-        <td>{cuisine}</td>
-        <td>
+        <td class="column">{name}</td>
+        <td class="column">{cuisine}</td>
+        <td class="column">
           <img src={photo} alt={name}></img>
         </td>
-        <td>{ingredients}</td>
-        <td>{preparation}</td>
-        <td>
+        <td class="noted" className="content_td"><p>{ingredients}</p></td>
+        <td class="noted" className="content_td"><p>{preparation}</p></td>
+        <td class="column">
           <button name="delete" onClick={() => deleteRecipe(index)}>
             Delete
           </button>
@@ -28,12 +28,12 @@ function RecipeList({ recipes, deleteRecipe }) {
       <table>
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Cuisine</th>
-            <th>Photo</th>
-            <th>Ingredients</th>
-            <th>Prepartion</th>
-            <th>Actions</th>
+            <th class="column">Name</th>
+            <th class="column">Cuisine</th>
+            <th class="column">Photo</th>
+            <th class="noted">Ingredients</th>
+            <th class="noted">Prepartion</th>
+            <th class="column">Actions</th>
           </tr>
         </thead>
         <tbody>{listRecipes}</tbody>
