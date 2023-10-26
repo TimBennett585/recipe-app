@@ -10,8 +10,8 @@ function RecipeList({ recipes, deleteRecipe }) {
         <td class="column">
           <img src={photo} alt={name}></img>
         </td>
-        <td class="noted" className="content_td"><p>{ingredients}</p></td>
-        <td class="noted" className="content_td"><p>{preparation}</p></td>
+        <td className="content_td"><p>{ingredients}</p></td>
+        <td className="content_td"><p>{preparation}</p></td>
         <td class="column">
           <button name="delete" onClick={() => deleteRecipe(index)}>
             Delete

@@ -32,7 +32,7 @@ function RecipeCreate({ createRecipe }) {
       <table>
         <tbody>
           <tr>
-            <td>
+            <td class="column">
               <label htmlFor="name"></label>
               <input
                 id="name"
@@ -44,7 +44,7 @@ function RecipeCreate({ createRecipe }) {
                 placeholder="Name"
               />
             </td>
-            <td>
+            <td class="column">
               <label htmlFor="cuisine"></label>
               <input
                 id="cuisine"
@@ -56,7 +56,7 @@ function RecipeCreate({ createRecipe }) {
                 placeholder="Cuisine"
               />
             </td>
-            <td>
+            <td class="column">
               <label htmlFor="photo"></label>
               <input
                 id="photo"
@@ -68,7 +68,7 @@ function RecipeCreate({ createRecipe }) {
                 placeholder="URL"
               />
             </td>
-            <td>
+            <td class="noted">
               <label htmlFor="ingredients"></label>
               <textarea
                 id="ingredients"
@@ -80,7 +80,7 @@ function RecipeCreate({ createRecipe }) {
                 placeholder="Ingredients"
               />
             </td>
-            <td>
+            <td class="noted">
               <label htmlFor="preparation"></label>
               <textarea
                 id="preparation"
@@ -92,7 +92,7 @@ function RecipeCreate({ createRecipe }) {
                 placeholder="Preparation"
               />
             </td>
-            <td>
+            <td class="column">
               <button type="submit">Create</button>
             </td>
           </tr>
